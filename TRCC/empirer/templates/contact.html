@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <!-- contact us page -->
+    <div class="contact-section">
+      <div class="contact-info">
+        <div><i class="fa fa-map-marker"></i>Front of Bridge, Oko-Erin Road, Ilorin</div>
+        <div><i class="fa fa-map-phone"></i>08120342704</div>
+        <div><i class="fa fa-map-envelope-o"></i>thechristempire@gmail.com</div>
+      </div>
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+      <form class="contact" action="" method="post">
+        <input type="text" name="name" class="textbox" placeholder="Your Name" required>
+        <input type="email" name="email" class="textbox" placeholder="Your E-mail" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <input type="Submit" name="name" class="send-btn" value="Send">
+      </form>
+      </div>
+  </div>
+
+
+  	<div class="container">
+	 <div class="mapouter">
+	  <div class="gmap_canvas">
+		<iframe width="650" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=oko%20erin%20bridge,%20Ilorin&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+	  </div>
+	 </div>
+	</div>
+  </section>
+
+ 
+
+  {%endblock%}
+

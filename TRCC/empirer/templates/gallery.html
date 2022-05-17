@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+
+<!-- Container for the image gallery -->
+<div class="container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+      <img src="../../static/img/3.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <img src="../../static/img/4.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="../../static/img/5.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="../../static/img/6.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="../../static/img/9.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="../../static/img/8.jpeg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="rowG">
+    <div class="column">
+      <img class="demo cursor" src="../../static/img/3.png" style="width:100%" onclick="currentSlide(1)" alt="For Thou O Lord are a Shield for us">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../../static/img/4.jpeg" style="width:100%" onclick="currentSlide(2)" alt="The Lord is our Glory and Lifter">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../../static/img/5.png" style="width:100%" onclick="currentSlide(3)" alt="The Lord is Good a stronghold for us">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../../static/img/6.jpeg" style="width:100%" onclick="currentSlide(4)" alt="The Lord in the midst of his people is Worthy">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../../static/img/9.png" style="width:100%" onclick="currentSlide(5)" alt="Fixing the World with the WORD">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../../static/img/8.jpeg" style="width:100%" onclick="currentSlide(6)" alt="Communion of Faith">
+    </div>
+  </div>
+</div>
+</section>
+
+{%endblock%}
