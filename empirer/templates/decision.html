@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+
+<div class="text-box">
+    <br>
+    <br>
+	<h3>ADD ANOTHER PROGRAM?</h3>
+	<p><a style="text-align: left;" href="{% url 'create_weekly' %}" class="hero-btn">Create New</a>&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;
+        <a style="text-align: right;" href="{% url 'programs_list' %}" class="hero-btn">View Programs</a>
+    </p>
+</div>
+</section>
+
+{% endblock content %}

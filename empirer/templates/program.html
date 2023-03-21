@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+      <div class="text-box">
+        <h1>OUR PROGRAMS</h1>
+        <p>Check out our weekly, monthly and annual programs<br> all in accordance with our vision and mission statements.</p>
+        <a href="#pro" class="hero-btn">Explore</a>
+      </div>
+    </section>
+
+    <div class="contain" id="live">
+      <br>
+      <h6>Join us Live Below</h6>
+      <br>
+      <br>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" width="853" height="480" src="{{ live_program.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    
+  
+    <section class="program" id="pro">
+
+      <h1>We are Committed</h1>
+      <p>To raising men with heaven as their singular goal and bringing the goodnews to the suffering and afflicted.</p>    
+
+      <div class="row">
+        <div class="program-col" id="pro">
+          <h3>LIFE SCHOOL</h3>
+          <img src="../../static/img/Programs/Lifeschool.jpg">
+          <p>Set to kick-oof in June, its a year program consisting 4 semesters.</p>
+        </div>
+
+        <div class="program-col" id="pro">
+          <h3>EMPIRE BUILDERS' SCHOOL</h3>
+          <img src="../../static/img/Programs/Empire.jpg">
+          <p>A year program starting by March with the main aim of raising Christ-like disciples</p>
+        </div>
+        <div class="program-col" id="pro">
+          <h3>LIFE <br>  CONFERENCE</h3>
+          <img src="../../static/img/Programs/LifeCon.jpg">
+          <p>Every First Week of March.</p>
+        </div>
+        <div class="program-col" id="pro">
+          <h3>CHURCH CONVENTION</h3>
+          <img src="../../static/img/Programs/ChurchConv.jpg">
+          <p>Every first weekend of August.</p>
+        </div>
+
+        <div class="program-col">
+          <h3>GRACE FOR THE RACE</h3>
+          <img src="../../static/img/Programs/GraceForRace.jpg">
+          <p>A gathering to interceed for the month and make life better, holds every First Three days of the Month</p>
+        </div>
+
+
+        <div class="program-col">
+          <h3>LEADER'S BREAKFAST</h3>
+          <img src="../../static/img/Programs/LeaderB.jpg">
+          <p>A gathering of leaders which holds every First Saturday of the month</p>
+        </div>
+
+      </div>
+    </section>
+
+  {%endblock%}

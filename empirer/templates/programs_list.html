@@ -1,0 +1,52 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+
+<div class="text-box">
+    <br>
+    <br>
+    <h3><br> <br> LIST OF PROGRAMS LIVE AND WITHIN THE WEEK</h3>
+    <br>
+  
+  </div>
+  </section>
+  
+    <div class="container-fluid bg-grey">
+
+        <h3>Live Program</h3>
+
+        <p style="text-align: center;"><a class="btn btn-dark link-button" href="{% url 'create_live' %}">Create New</a></p>
+        {% for program in live %} 
+        <div class="row">
+            <div class="col-sm-8">
+                <h5 class="programh5">{{ program.title }}</h5>
+                <br>
+                <p class="sp"><b>link:</b> {{ program.url|truncatechars:30 }}</p>
+                <a class="btn btn-dark link-button" href="{% url 'update_live' program.id %}">Edit</a>
+                <a class="btn btn-dark send-btn" href="{% url 'delete_live' program.id %}?next=/programs-list">Delete</a>
+                <br> <br>
+            </div>
+        </div>
+        {% endfor %} 
+
+        <br><br>
+        
+        <h3>This Week Programs</h3>
+        <p style="text-align: center;"><a class="btn btn-dark link-btn" href="{% url 'create_weekly' %}">Create New</a></p>
+        {% for program in weekly %}
+        <div class="row">
+          <div class="col-sm-8">
+            <h5 class="programh5">{{ program.title }}</h5>
+            <br>
+            <p class="sp"><b>link:</b> {{ program.url|truncatechars:30 }}</p>
+            <a class="btn btn-dark link-button" href="{% url 'update_weekly' program.id %}">Edit</a>
+            <a class="btn btn-dark send-btn" href="{% url 'delete_weekly' program.id %}?next=/programs-list">Delete</a>
+        </div>
+        </div>
+        {% endfor %}
+        <br>
+      </div>
+    </div>
+
+
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+
+<div class="contact-section">
+    <div class="contact-form">
+        <h2>Login</h2>
+        <form method="POST" class="contact">
+            {% csrf_token %}
+            <p>username: <input type="text" name="username" class="textbox" placeholder="Your Username" required></p>
+            <p>password: <input type="password" name="password" class="textbox" placeholder="••••••••" required></p>
+            <input type="Submit" class="create-btn" value="Submit">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

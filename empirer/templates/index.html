@@ -1,0 +1,104 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="text-box">
+		<br>
+		<br>
+		<h3>Welcome  to <br> THE RISEN CHRIST CHRISTIAN CENTRE</h3>
+		<br>
+		<h1>THE CHRIST EMPIRE</h1>
+
+		<p>Fixing the World with the WORD</p>
+		<br>
+		<a href="{% url 'contact' %}" class="hero-btn">I'm New</a>
+
+	</div>
+	</section>
+	
+
+	<!----Our Programs---->
+
+	<section class="program">
+		<h1>We are Committed</h1>
+		<h5>To raising men with heaven as their singular goal and bringing the goodnews to the suffering and afflicted.</h5>
+		<div class="row">
+			<div class="program-col">
+				<h3>Vision</h3>
+				<p>The Risen Christ Christian Center was born out of direct instruction from the Lord himself around October 2020 when he visited Pastor Bashiru Biodun and said “You are to lead my people to heaven”. Therefore, the ministry has a singular vision of ensuring by God’s grace that everyone who comes in contact with her ends up his/her journey here on earth in heaven.</p>
+			</div>
+
+			<div class="program-col">
+				<h3>Mission</h3>
+				<p>To bring the good news to the suffering and afflicted by leading every man to the cross of Christ: the only place salvation is made available to all men via faith in the Lord Jesus Christ and his resurrection and the only place where transformation of life is possible by the faith in the finished work of the cross; and to teach the possibility of godly and righteous life in this crooked and perverse generation via the power of the cross and teaching of the grace it brings (Titus 2:11-15).</p>
+			</div>
+
+			<div class="program-col">
+				<h3>Beliefs</h3>
+				<ul>
+					<li>Salvation</li>
+					<li>Grace</li>
+					<li>Word of God</li>
+					<li>Holy Ghost Baptism</li>
+					<li>Faith</li>
+					<li>Prayer</li>
+					<li>Divine Leading</li>
+					<li>Trinity</li>
+					<li>Evangelism</li>
+					<li>Mission</li>
+					<li>Marriage</li>
+					<li>Godly Prosperity</li>
+					<li>Prosperity Of The Church</li>
+					<li>Rapture & Heaven</li>
+				</ul>
+				
+			</div>
+			
+		</div>
+	</section>
+
+		<div class="container">
+			<h3>Upcoming Programs Flash</h3>
+			<br>
+			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner">
+                {% for program in programs %}
+
+                {% if program == programs.first %}
+				<div class="carousel-item active">
+					<img src="{{ programs.first.url }}" class="d-block w-100" alt="...">
+				</div>
+                {% elif not program == program.first %}
+				<div class="carousel-item">
+					<img src="{{ program.url }}" class="d-block w-100" alt="Nothing to show">
+				</div>
+                {% endif %}
+                
+                {% endfor %}
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</div>
+
+
+
+	
+
+	<section class="cta">
+		<h1>Fellowship with us today Live anywhere you are</h1>
+		<a href="{% url 'program' %}#live" class="hero-btn">JOIN US LIVE</a>
+	</section>
+	
+{%endblock%}

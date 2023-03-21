@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+<div class="contact-section">
+    <div class="contact-form">
+        
+        <form class="contact" action="" method="post">
+            {% csrf_token %} 
+            <h2>Are you sure you want to delete "{{ object }}"?</h2>
+
+            <a class="btn btn-dark link-button" href="{{ request.GET.next }}">Go Back</a>
+            <input type="Submit" class="send-btn" value="Confirm">
+        </form>
+
+    </div>
+</div>
+
+{% endblock content %} 

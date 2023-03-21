@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+<div class="contact-section">
+    <div class="contact-form">
+        {% if page == 'live' %} 
+        <h2>New Live Program</h2>
+        {% else %}
+        <h2>New Weekly Program</h2>
+        {% endif %}
+        <form class="contact" action="" method="post">
+            {% csrf_token %} 
+            {{ form.as_p }}
+            <input type="Submit" class="create-btn" value="Submit">
+        </form>
+    </div>
+</div>
+
+{% endblock content %} 
